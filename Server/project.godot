@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Server"
-run/main_scene="res://Scenes/server.tscn"
+run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Combat="*res://Scripts/combat.gd"
+Servers="*res://Scripts/servers.gd"
 
 [rendering]
 

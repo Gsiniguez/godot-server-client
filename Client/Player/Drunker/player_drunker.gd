@@ -22,7 +22,6 @@ func _ready():
 
 func _physics_process(delta):
 	if not _sync.is_multiplayer_authority(): return
-	
 	# Add the gravity.
 	if not is_on_floor():
 		self.velocity.y -= gravity * delta

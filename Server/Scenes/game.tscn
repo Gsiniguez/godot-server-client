@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://cugtd5sojjn6h"]
+
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_gnubp"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_gnubp")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Host" type="Button" parent="UI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Hostear"
+
+[node name="Connect" type="Button" parent="UI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ingresar"
+
+[node name="VBoxHost" type="VBoxContainer" parent="UI/Panel/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CreateRoom" type="Button" parent="UI/Panel/MarginContainer/VBoxHost"]
+layout_mode = 2
+text = "Nuevo Room"
+
+[node name="VBoxClient" type="VBoxContainer" parent="UI/Panel/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Join Room" type="Button" parent="UI/Panel/MarginContainer/VBoxClient"]
+layout_mode = 2
+text = "Join Room"
+
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBoxContainer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBoxContainer/Connect" to="." method="_on_connect_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBoxHost/CreateRoom" to="." method="_on_create_room_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBoxClient/Join Room" to="." method="_on_join_room_pressed"]
