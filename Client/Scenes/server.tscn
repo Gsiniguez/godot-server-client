@@ -11,5 +11,6 @@ script = ExtResource("1_n2v2t")
 script = ExtResource("1_c3oii")
 
 [node name="Map" parent="SceneHandler" instance=ExtResource("2_yyk31")]
+visible = false
 
 [editable path="SceneHandler/Map"]

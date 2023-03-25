@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/server.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Combat="*res://Scripts/combat.gd"
+
 [input]
 
 forward={
